@@ -1,0 +1,8 @@
+export const Primary = '#946AEF';
+export const Primary20 = 'rgba(148, 106, 239, 0.2)';
+export const Gradient = ['#0C1841', '#3446A3'];
+export const White = '#FFFFFF';
+
+export const Black = '#000000';
+export const Black38 = 'rgba(0, 0, 0, 0.38)';
+export const Black87 = 'rgba(0, 0, 0, 0.87)';
