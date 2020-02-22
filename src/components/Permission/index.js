@@ -3,7 +3,7 @@ import Modal from 'react-native-modal';
 import * as images from 'assets/images';
 import * as style from './style';
 
-export default ({visible}) => (
+export default ({visible, onPermission}) => (
   <Modal isVisible={visible}>
     <style.Container>
       <style.Content>
@@ -31,7 +31,7 @@ export default ({visible}) => (
         선택 권한은 서비스 사용 중 필요한 시점에 동의를 받고 있습니다. 허용하지 않으셔도 서비스 이용이 가능합니다.
       </style.Description>
 
-      <style.Confirm>
+      <style.Confirm onPress={() => onPermission()}>
         <style.ConfirmText>확인</style.ConfirmText>
       </style.Confirm>
     </style.Container>
