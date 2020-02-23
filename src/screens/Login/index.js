@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import KakaoLogins from '@react-native-seoul/kakao-login';
+import { GoogleSignin, statusCodes } from '@react-native-community/google-signin';
 import View from './view';
 
 export default () => {
@@ -14,8 +15,15 @@ export default () => {
     }
   };
 
-  const onGoogle = () => {
-
+  const onGoogle = async () => {
+    GoogleSignin.configure();
+    try {
+      await GoogleSignin.hasPlayServices();
+      const userInfo = await GoogleSignin.signIn();
+      console.log(userInfo);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
