@@ -5,6 +5,9 @@ export default () => {
   const [active, setActive] = useState(false);
   const [nickname, setNickname] = useState('');
   const [recommend, setRecommend] = useState('');
+  const [nicknameError, setNicknameError] = useState(false);
+  const [recommendError, setRecommendError] = useState(false);
+  const [message, setMessage] = useState(null);
 
   const onChangeNickname = value => {
     if (value.length < 11) {
@@ -29,6 +32,9 @@ export default () => {
       recommend={recommend}
       onChangeNickname={onChangeNickname}
       onChangeRecommend={onChangeRecommend}
+      nicknameError={nicknameError}
+      recommendError={recommendError}
+      message={message}
     />
   );
 };

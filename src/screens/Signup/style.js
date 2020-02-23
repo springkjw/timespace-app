@@ -6,6 +6,7 @@ import {
   White,
   White38,
   Black38,
+  Red,
 } from 'assets/colors';
 
 export const Container = styled.KeyboardAvoidingView`
@@ -18,7 +19,11 @@ export const Container = styled.KeyboardAvoidingView`
   justify-content: space-between;
 `;
 
-export const InputWrapper = styled.View``;
+export const InputContent = styled.View``;
+
+export const InputWrapper = styled.View`
+  position: relative;
+`;
 
 export const Input = styled.TextInput`
   height: 56px;
@@ -28,6 +33,24 @@ export const Input = styled.TextInput`
   margin-bottom: 12px;
   font-size: 16px;
   color: ${White};
+`;
+
+export const ErrorIcon = styled.Image`
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 18px;
+  right: 14px;
+`;
+
+export const ErrorLabel = styled.Text`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: ${Red};
+  margin-left: 12px;
+  margin-top: -8px;
 `;
 
 export const ButtonWrapper = styled.View`

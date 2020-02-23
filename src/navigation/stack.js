@@ -26,8 +26,9 @@ export default () => (
     <Stack.Screen
       name="Signup"
       component={screens.Signup}
-      options={{
+      options={({navigation}) => ({
         title: '회원가입',
+        gestureEnabled: false,
         headerStyle: {
           backgroundColor: Background,
           borderBottomWidth: 0,
@@ -42,10 +43,8 @@ export default () => (
           fontWeight: 'bold',
           fontSize: 20,
         },
-        headerLeft: ({navigation}) => (
-          <Back onPress={() => navigation.goBack()} />
-        ),
-      }}
+        headerLeft: () => <Back onPress={() => navigation.goBack()} />,
+      })}
     />
     <Stack.Screen name="BottomTab" component={Tab} />
   </Stack.Navigator>

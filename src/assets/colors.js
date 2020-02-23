@@ -15,3 +15,4 @@ export const Black38 = 'rgba(0, 0, 0, 0.38)';
 export const Black87 = 'rgba(0, 0, 0, 0.87)';
 
 export const Yellow = '#FFE500';
+export const Red = '#FF5252';

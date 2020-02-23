@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-native-modal';
-import * as images from 'assets/images';
+import {Marker} from 'assets/images';
 import * as style from './style';
 
 export default ({visible, onPermission}) => (
@@ -15,7 +15,7 @@ export default ({visible, onPermission}) => (
 
         <style.Item>
           <style.Circle>
-            <style.Icon source={images.Marker} />
+            <style.Icon source={Marker} />
           </style.Circle>
 
           <style.PermissionWrapper>
@@ -28,7 +28,8 @@ export default ({visible, onPermission}) => (
       </style.Content>
 
       <style.Description>
-        선택 권한은 서비스 사용 중 필요한 시점에 동의를 받고 있습니다. 허용하지 않으셔도 서비스 이용이 가능합니다.
+        선택 권한은 서비스 사용 중 필요한 시점에 동의를 받고 있습니다. 허용하지
+        않으셔도 서비스 이용이 가능합니다.
       </style.Description>
 
       <style.Confirm onPress={() => onPermission()}>

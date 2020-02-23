@@ -1,5 +1,6 @@
 import ArrowLeft from './images/arrow-left.png';
 import ArrowRight from './images/arrow-right.png';
+import Error from './images/error.png';
 import Google from './images/google.png';
 import Intro1 from './images/intro-1.png';
 import Intro2 from './images/intro-2.png';
@@ -11,6 +12,7 @@ import LogoLogin from './images/logo-login.png';
 export {
   ArrowLeft,
   ArrowRight,
+  Error,
   Google,
   Intro1,
   Intro2,
