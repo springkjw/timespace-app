@@ -134,6 +134,7 @@ export const Confirm = styled.TouchableOpacity`
   box-shadow: 0px 8px 10px rgba(148, 106, 239, 0.38);
   margin-right: 16px;
   margin-left: 16px;
+  margin-bottom: 24px;
 `;
 
 export const ConfirmText = styled.Text`
