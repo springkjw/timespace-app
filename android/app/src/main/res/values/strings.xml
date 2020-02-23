@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">timespace</string>
+    <string name="app_name">타임스페이스</string>
+    <string name="kakao_app_key">78868749dde20912ad64cf6bfc732793</string>
 </resources>
