@@ -16,7 +16,7 @@ export default ({
   step,
   sliderImage,
   sliderText,
-  onSkip,
+  onFinish,
   goNext,
 }) => (
   <LinearGradient colors={colors.Gradient} style={style.Container}>
@@ -64,14 +64,22 @@ export default ({
     </style.Wrapper>
 
     <style.Bottom>
-      <style.Skip onPress={() => onSkip()}>
-        <style.SkipText>SKIP</style.SkipText>
-      </style.Skip>
+      {step + 1 !== contents.length ? (
+        <>
+          <style.Skip onPress={() => onFinish()}>
+            <style.SkipText>SKIP</style.SkipText>
+          </style.Skip>
 
-      <style.Next onPress={() => goNext()}>
-        <style.NextText>다음</style.NextText>
-        <style.NextIcon source={images.ArrowRight} resizeMode="contain" />
-      </style.Next>
+          <style.Next onPress={() => goNext()}>
+            <style.NextText>다음</style.NextText>
+            <style.NextIcon source={images.ArrowRight} resizeMode="contain" />
+          </style.Next>
+        </>
+      ) : (
+        <style.Confirm onPress={() => onFinish()}>
+          <style.ConfirmText>확인</style.ConfirmText>
+        </style.Confirm>
+      )}
     </style.Bottom>
 
     <Permission visible={modal} onPermission={onPermission} />

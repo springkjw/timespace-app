@@ -7,5 +7,11 @@ module.exports = {
         root: ['./src'],
       },
     ],
+    [
+      '@babel/plugin-proposal-decorators',
+      {
+        legacy: true,
+      },
+    ],
   ],
 };

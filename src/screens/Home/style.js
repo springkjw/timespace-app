@@ -1,3 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
-export const Container = styled.View``;
+export const Container = {
+  flex: 1,
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+};

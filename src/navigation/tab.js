@@ -6,6 +6,6 @@ const Tab = createBottomTabNavigator();
 
 export default () => (
   <Tab.Navigator>
-    <Tab.Screen name="Home" component={screens.Intro} />
+    <Tab.Screen name="Home" component={screens.Home} />
   </Tab.Navigator>
 );

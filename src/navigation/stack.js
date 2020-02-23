@@ -14,6 +14,13 @@ export default () => (
         headerShown: false,
       }}
     />
+    <Stack.Screen
+      name="Login"
+      component={screens.Login}
+      options={{
+        headerShown: false,
+      }}
+    />
     <Stack.Screen name="BottomTab" component={Tab} />
   </Stack.Navigator>
 );

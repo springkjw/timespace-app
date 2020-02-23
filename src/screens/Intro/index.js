@@ -1,6 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react';
+import {useObserver} from 'mobx-react';
 import {Platform} from 'react-native';
 import {check, request, PERMISSIONS, RESULTS} from 'react-native-permissions';
+import {useNavigation} from '@react-navigation/native';
 import contents from './contents';
 import View from './view';
 
@@ -14,6 +16,7 @@ export default () => {
   const [step, setStep] = useState(0);
   const sliderImage = useRef(null);
   const sliderText = useRef(null);
+  const {navigate} = useNavigation();
 
   useEffect(() => {
     check(permission).then(result => {
@@ -28,12 +31,8 @@ export default () => {
     await request(permission);
   };
 
-  const onSkip = () => {
-    if (step > 0) {
-      setStep(step - 1);
-      sliderImage.current.snapToPrev();
-      sliderText.current.snapToPrev();
-    }
+  const onFinish = () => {
+    navigate('Login');
   };
 
   const goNext = () => {
@@ -51,7 +50,7 @@ export default () => {
       step={step}
       sliderImage={sliderImage}
       sliderText={sliderText}
-      onSkip={onSkip}
+      onFinish={onFinish}
       goNext={goNext}
     />
   );

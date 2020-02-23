@@ -1,5 +1,8 @@
-import styled from 'styled-components';
+import {Dimensions} from 'react-native';
+import styled from 'styled-components/native';
 import {Primary, White, White38, White60, White87} from 'assets/colors';
+
+const {width} = Dimensions.get('window');
 
 export const Container = {
   flex: 1,
@@ -9,7 +12,7 @@ export const Container = {
 };
 
 export const Wrapper = styled.View`
-  height: 500;
+  height: 500px;
   justify-content: center;
   align-items: center;
 `;
@@ -120,3 +123,24 @@ export const Dot = {
   borderRadius: 2,
   backgroundColor: Primary,
 };
+
+export const Confirm = styled.TouchableOpacity`
+  width: ${`${width - 32}px`};
+  height: 56px;
+  background-color: ${Primary};
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 10px rgba(148, 106, 239, 0.38);
+  margin-right: 16px;
+  margin-left: 16px;
+`;
+
+export const ConfirmText = styled.Text`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: ${White};
+`;

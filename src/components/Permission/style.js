@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import {White, Primary, Primary20, Black38, Black87} from 'assets/colors';
 
 export const Container = styled.View`
