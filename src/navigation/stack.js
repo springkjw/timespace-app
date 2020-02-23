@@ -46,6 +46,14 @@ export default () => (
         headerLeft: () => <Back onPress={() => navigation.goBack()} />,
       })}
     />
+    <Stack.Screen
+      name="Welcome"
+      component={screens.Welcome}
+      options={{
+        headerShown: false,
+        gestureEnabled: false,
+      }}
+    />
     <Stack.Screen name="BottomTab" component={Tab} />
   </Stack.Navigator>
 );

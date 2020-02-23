@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
 import View from './view';
 
 export default () => {
@@ -8,6 +9,8 @@ export default () => {
   const [nicknameError, setNicknameError] = useState(false);
   const [recommendError, setRecommendError] = useState(false);
   const [message, setMessage] = useState(null);
+
+  const {navigate} = useNavigation();
 
   const onChangeNickname = value => {
     if (value.length < 11) {
@@ -25,6 +28,10 @@ export default () => {
     setRecommend(value);
   };
 
+  const onSubmit = () => {
+    navigate('Welcome');
+  };
+
   return (
     <View
       active={active}
@@ -35,6 +42,7 @@ export default () => {
       nicknameError={nicknameError}
       recommendError={recommendError}
       message={message}
+      onSubmit={onSubmit}
     />
   );
 };

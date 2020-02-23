@@ -13,6 +13,7 @@ export default ({
   nicknameError,
   recommendError,
   message,
+  onSubmit,
 }) => (
   <style.Container behavior="padding" keyboardVerticalOffset={90}>
     <style.InputContent>
@@ -43,7 +44,10 @@ export default ({
     </style.InputContent>
 
     <style.ButtonWrapper>
-      <style.Button disabled={!active} active={active}>
+      <style.Button
+        disabled={!active}
+        active={active}
+        onPress={() => onSubmit()}>
         <style.ButtonText active={active}>확인</style.ButtonText>
       </style.Button>
       <SafeAreaView />
