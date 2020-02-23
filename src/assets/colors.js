@@ -1,4 +1,6 @@
 export const Gradient = ['#0C1841', '#3446A3'];
+export const Background = '#253159';
+export const BackgroundLight = '#30416D';
 
 export const Primary = '#946AEF';
 export const Primary20 = 'rgba(148, 106, 239, 0.2)';

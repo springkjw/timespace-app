@@ -32,7 +32,7 @@ export default () => {
   };
 
   const onFinish = () => {
-    navigate('Login');
+    navigate('Signup');
   };
 
   const goNext = () => {

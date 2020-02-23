@@ -1,3 +1,4 @@
+import ArrowLeft from './images/arrow-left.png';
 import ArrowRight from './images/arrow-right.png';
 import Google from './images/google.png';
 import Intro1 from './images/intro-1.png';
@@ -8,6 +9,7 @@ import Marker from './images/marker.png';
 import LogoLogin from './images/logo-login.png';
 
 export {
+  ArrowLeft,
   ArrowRight,
   Google,
   Intro1,
