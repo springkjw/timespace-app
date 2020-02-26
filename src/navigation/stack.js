@@ -8,7 +8,7 @@ import Tab from './tab';
 const Stack = createStackNavigator();
 
 export default () => (
-  <Stack.Navigator initialRouteName="Signup">
+  <Stack.Navigator initialRouteName="Main">
     <Stack.Screen
       name="Intro"
       component={screens.Intro}
@@ -43,7 +43,15 @@ export default () => (
           fontWeight: 'bold',
           fontSize: 20,
         },
-        headerLeft: () => <Back onPress={() => navigation.goBack()} />,
+        headerLeft: () => (
+          <Back
+            onPress={() => {
+              if (navigation.canGoBack()) {
+                navigation.goBack();
+              }
+            }}
+          />
+        ),
       })}
     />
     <Stack.Screen
@@ -54,6 +62,12 @@ export default () => (
         gestureEnabled: false,
       }}
     />
-    <Stack.Screen name="BottomTab" component={Tab} />
+    <Stack.Screen
+      name="Main"
+      component={Tab}
+      options={{
+        headerShown: false,
+      }}
+    />
   </Stack.Navigator>
 );

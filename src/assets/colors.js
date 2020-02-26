@@ -16,3 +16,5 @@ export const Black87 = 'rgba(0, 0, 0, 0.87)';
 
 export const Yellow = '#FFE500';
 export const Red = '#FF5252';
+
+export const TabDark = '#1A1A3C';
